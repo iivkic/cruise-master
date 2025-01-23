@@ -1,0 +1,17 @@
+<svg id="detail_view" data-name="detail view" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g class="icon_stroke"  id="Rectangle_852" data-name="Rectangle 852" fill="none" stroke="#414141" stroke-width="1">
+    <rect width="6" height="6" rx="2" stroke="none"/>
+    <rect x="0.5" y="0.5" width="5" height="5" rx="1.5" fill="none"/>
+  </g>
+  <g class="icon_stroke"  id="Rectangle_853" data-name="Rectangle 853" transform="translate(0 7)" fill="none" stroke="#414141" stroke-width="1">
+    <rect width="6" height="6" rx="2" stroke="none"/>
+    <rect x="0.5" y="0.5" width="5" height="5" rx="1.5" fill="none"/>
+  </g>
+  <g class="icon_stroke"  id="Rectangle_854" data-name="Rectangle 854" transform="translate(0 14)" fill="none" stroke="#414141" stroke-width="1">
+    <rect width="6" height="6" rx="2" stroke="none"/>
+    <rect x="0.5" y="0.5" width="5" height="5" rx="1.5" fill="none"/>
+  </g>
+  <line class="icon_stroke" id="Line_455" data-name="Line 455" x2="12" transform="translate(8 3)" fill="none" stroke="#414141" stroke-width="1"/>
+  <line class="icon_stroke" id="Line_456" data-name="Line 456" x2="12" transform="translate(8 10)" fill="none" stroke="#414141" stroke-width="1"/>
+  <line class="icon_stroke" id="Line_457" data-name="Line 457" x2="12" transform="translate(8 17)" fill="none" stroke="#414141" stroke-width="1"/>
+</svg>

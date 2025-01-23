@@ -1,0 +1,103 @@
+.terms-container, .privacy-container, .about-us-container{
+    .section{
+        padding: 16px;
+
+        p, div, a{
+            font-size: 14px;
+            line-height: 24px;
+            color: #414141;
+            margin: 0;
+        }
+
+        a{
+            color: #1593E6;
+        }
+
+        .title{
+
+            h1{
+                font-size: 20px;
+                line-height: 24px;
+                color: #1593E6;
+            }
+
+        }
+
+        .related-section{
+            margin-top: 50px;
+            .related-title{
+                font-size: 20px;
+                line-height: 24px;
+            }
+            .related-links{
+                margin-top: 19px;
+                a{
+                    display: block;
+                    cursor: pointer;
+                    font-size: 15px;
+                    line-height: 26px;
+                    color: #1593E6;
+                    letter-spacing: 0.75px;
+                    font-weight: bold;
+                }
+            }
+        }
+
+
+    }
+
+    @media (min-width: $break-s) {
+        .section {
+            padding: 32px;
+        }
+    }
+
+    @media (min-width: $break-m) {
+        .section {
+            padding-left: 60px;
+            padding-right: 60px;
+
+            .title{
+                h2 {
+                    font-size: 32px;
+                    line-height: 38px;
+                }
+            }
+        }
+    }
+
+    @media (min-width: $break-l) {
+        .section {
+            padding-left: 100px;
+            padding-right: 100px;
+
+            .title{
+                h2 {
+                    font-size: 40px;
+                    line-height: 48px;
+                }
+            }
+
+            .related-section{
+                margin-top: 0;
+                max-width: 300px;
+                margin-left: auto;
+            }
+        }
+    }
+
+    @media(min-width: $break-xl) {
+        .section {
+            padding-left: 138px;
+            padding-right: 138px;
+        }
+    }
+
+    @media(min-width: $break-xxl) {
+        .section {
+            padding-left: 238px;
+            padding-right: 238px;
+        }
+    }
+}
+

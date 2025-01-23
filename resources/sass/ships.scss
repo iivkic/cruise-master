@@ -1,0 +1,498 @@
+.ships-container {
+    .section{
+        padding: 16px;
+    }
+
+    .header {
+        position: relative;
+        background: transparent url('/images/ships/ship.jpg') no-repeat 65% center;
+        background-size: cover;
+        min-height: 568px;
+        display: flex;
+        align-items: flex-end;
+
+        .header-content{
+            position: relative;
+            .title {
+                font-size: 24px;
+                line-height: 32px;
+                letter-spacing: 1.2px;
+                font-weight: bold;
+                h1{
+                    margin: 0;
+                    font-size: inherit;
+                    line-height: inherit;
+                    letter-spacing: inherit;
+                    font-weight: inherit;
+                }
+
+                .small {
+                    font-size: 16px;
+                    line-height: 20px;
+                    letter-spacing: 1.6px;
+                    font-weight: bold;
+                    padding-bottom: 12px;
+                }
+            }
+
+            .line{
+                border: 1px solid white;
+                width: 100%;
+                max-width: 180px;
+                margin-top: 18px;
+                margin-bottom: 36px;
+            }
+
+            .text{
+                font-size: 13px;
+                line-height: 24px;
+                letter-spacing: 0.65px;
+            }
+        }
+    }
+
+    .ships-wrapper{
+        min-height:720px;
+        transition: min-height 0.4s;
+        @media only screen and(max-width: 1200px){
+            .sticky-desktop{
+                display: none !important;
+
+            }
+
+        }
+        @media only screen and(min-width: 1200px){
+            .sticky-mobile{
+                display: none !important;
+            }
+
+        }
+        .sticky {
+            overflow: inherit;
+            white-space: nowrap;
+            color: #1D374F;
+            font-weight: bold;
+            font-size: 14px;
+            position: relative;
+            top: 0;
+            &.sticky-desktop ul{
+                display: flex !important;
+                .border-container {
+                    position: relative;
+                    width: auto;
+                }
+            }
+
+            //overflow-x: auto;
+            //overflow-y: hidden;
+            margin-bottom: 24px;
+            text-align: center;
+            display: inline-block;
+            min-width: 150px;
+
+            .dropdown-trigger{
+                //display: none;
+            }
+
+
+            &.active {
+                //border-radius: 24px;
+                position: sticky;
+                top: 25px !important;
+                border-radius: 24px;
+                border: 2px solid #E4ECF1;
+                box-shadow: 0 3px 6px rgba(29, 55, 79, 0.22);
+                background-color: white;
+                ul li{
+                    padding: 0 8px;
+
+                    &:first-child{
+                        padding-left: 16px;
+                    }
+
+                    &:last-child{
+                        padding-right: 16px;
+                    }
+                }
+            }
+
+            &::-webkit-scrollbar, ::-webkit-scrollbar-track, ::-webkit-scrollbar-thumb {
+                display: none;
+                width: 0px;
+                background: transparent;
+
+                * {
+                    width: 0px;
+                }
+            }
+
+            .border-container {
+                position: relative;
+                width: 100%;
+
+                .border {
+                    width: 0;
+                    position: absolute;
+                    top: -2px;
+                    left: 0;
+                    border-bottom: 2px solid #1593E6;
+                    transition: left 0.3s ease;
+                }
+            }
+
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                font-size: 0;
+
+
+                li {
+                    font-size: 16px;
+                    //display: inline-block;
+                    padding: 0 12px;
+                    font-weight: 500;
+
+                    a {
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        padding: 12px 0 14px 0;
+                        display: block;
+                        color: #414141;
+
+
+                        &.active {
+                          color: #1593E6;
+                        }
+                    }
+                }
+            }
+        }
+
+        .ship-search-container{
+            background: rgba(255, 255, 255, 1) 0 0 no-repeat padding-box;
+            box-shadow: 0 0 46px rgba(0, 0, 0, 0.20);
+            border-radius: 46px;
+            padding: 16px;
+            position: relative;
+
+            input{
+                width: 100%;
+                border-radius: 31px;
+                background: white;
+                border: 1px solid #CFD7DB;
+                font-size: 14px;
+                line-height: 18px;
+                letter-spacing: 0.7px;
+                padding: 11px 26px;
+                color: #414141;
+                opacity: 1;
+                font-family: $montserrat;
+                font-weight: 500;
+
+                &:hover, &:focus{
+                    border: 1px solid #1593E6;
+
+                    + svg{
+
+                        *{
+                            stroke: #1593E6;
+                        }
+                    }
+                }
+            }
+
+            ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                color: #414141;
+                opacity: 1;
+            }
+            ::-moz-placeholder { /* Firefox 19+ */
+                color: #414141;
+                opacity: 1;
+            }
+            :-ms-input-placeholder { /* IE 10+ */
+                color: #414141;
+                opacity: 1;
+            }
+            :-moz-placeholder { /* Firefox 18- */
+                color: #414141;
+                opacity: 1;
+            }
+
+            .search-icon {
+                position: absolute;
+                right: 32px;
+                top: 24px;
+                z-index: 1;
+                cursor: pointer;
+                * {
+                    stroke: #9E9E9E;
+                }
+
+                &.delete{
+                    top: 24px;
+                }
+            }
+        }
+
+        .results{
+            .cards{
+                margin: 16px -16px 0 -16px;
+
+                .ships_container{
+                    padding: 32px 16px;
+                }
+            }
+
+            .card{
+                margin-bottom: 1.5rem;
+            }
+
+            .row, .column{
+                overflow:hidden;
+
+                .slick-slider{
+                    margin-bottom: 0;
+                }
+            }
+
+            .empty-state{
+                border: 1px solid #E4ECF1;
+                border-radius: 6px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                height: 128px;
+                //max-height: 128px;
+                p{
+                    margin: 0 0 14px 0;
+                    color: #414141;
+                    font-size: 20px;
+                    line-height: 24px;
+                    letter-spacing: 1px;
+                }
+                a{
+                    color: #1593E6;
+                    font-size: 14px;
+                    line-height: 24px;
+                    letter-spacing: 0.7px;
+                    text-transform: uppercase;
+                }
+
+            }
+        }
+    }
+
+    @media (min-width: $break-s){
+        .section{
+            padding-left: 32px;
+            padding-right: 32px;
+        }
+
+        .header.section{
+            padding-bottom: 32px;
+        }
+
+        .ships-wrapper{
+            padding-top: 32px;
+            .sticky{
+                margin-bottom: 30px;
+                margin-top: 16px;
+                overflow: inherit;
+
+                &.active{
+                    ul li{
+
+                        &:first-child{
+                            padding-left: 27px;
+                        }
+
+                        &:last-child{
+                            padding-right: 27px;
+                        }
+                    }
+                }
+            }
+
+            .ship-search-container{
+                max-width: 288px;
+            }
+        }
+    }
+
+    @media (min-width: $break-m){
+        .section{
+            padding-left: 60px;
+            padding-right: 60px;
+        }
+
+        .header{
+            min-height: 520px;
+            max-height: 520px;
+            .header-content{
+                max-width: 420px;
+            }
+        }
+
+        .ships-wrapper{
+            .sticky, .ship-search-container{
+                //display: inline-block;
+                overflow: inherit;
+            }
+
+            .ship-search-container{
+                float: right;
+            }
+        }
+    }
+
+    @media (min-width: $break-l){
+        .section{
+            padding-left: 104px;
+            padding-right: 104px;
+        }
+
+        .header.section{
+            min-height: 400px;
+            //max-height: 400px;
+            padding-bottom: 46px;
+
+            .header-content{
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                max-width: 100%;
+
+                .title{
+                    font-size: 50px;
+                    line-height: 64px;
+                    letter-spacing: 2.5px;
+                    margin-top: auto;
+                    min-width: 607px;
+                    max-width: 607px;
+
+                    .small{
+                        font-size: 20px;
+                        line-height: 24px;
+                        letter-spacing: 2px;
+                    }
+                }
+
+                .text-container{
+                    width: 100%;
+                    max-width: 100%;
+                    margin-left: 60px;
+                }
+            }
+        }
+        .ships-wrapper {
+            .ship-search-container {
+                width: 100%;
+                max-width: 354px;
+
+                input{
+                    padding-top: 23px;
+                    padding-bottom: 23px;
+                    font-size: 14px;
+                    line-height: 18px;
+                }
+
+                .search-icon{
+                    top: 36px;
+                    &.delete{
+                        top: 36px;
+                    }
+                }
+            }
+
+            .sticky{
+                margin-top: 32px;
+                overflow: inherit;
+
+                .dropdown-trigger{
+                    display: inline-block;
+                }
+
+                ul li{
+                    font-size: 16px;
+                    line-height: 16px;
+                    display: block;
+                }
+            }
+
+            .results{
+
+                .cards{
+
+                    .ships_container {
+                        margin: 0 -0.75rem;
+
+                        .column{
+                            margin: 0 0.75rem 1.5rem 0.75rem;
+                            flex-basis: calc((100% / 3) - 1.5rem);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: $break-xl){
+        .section{
+            padding-left: 138px;
+            padding-right: 138px;
+        }
+
+        .header.section{
+            min-height: 520px;
+            max-height: 520px;
+            padding-bottom: 60px;
+
+            .header-content{
+                justify-content: space-between;
+
+                .text-container{
+                    max-width: 460px;
+                    margin-left: 30px;
+                }
+            }
+        }
+    }
+
+    @media (min-width: $break-xxl){
+        .section{
+            padding-left: 238px;
+            padding-right: 238px;
+        }
+
+        .header.section{
+            padding-bottom: 100px;
+        }
+
+        .ships-wrapper{
+            .results{
+
+                .cards{
+
+                    .ships_container {
+                        margin: 0 -16px;
+
+                        .column{
+                            margin: 0 16px 32px 16px;
+                            flex-basis: calc((100% / 4) - 32px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.webp .ships-container {
+    .header {
+        background: transparent url('/images/ships/ship.webp') no-repeat 65% center;
+        background-size: cover;
+    }
+}

@@ -1,0 +1,37 @@
+@extends('layouts.master')
+@section('content')
+    <div class="about-us-container">
+        <div class="row section">
+            <div class="column xs12">
+                <div class="title">
+                    <h1>About Us</h1>
+                </div>
+            </div>
+            <div class="column xs12 l8">
+                <div class="terms-section">
+                    <div class="terms-text">
+                        @lang('about.about-text')
+                    </div>
+                </div>
+            </div>
+            <div class="column xs12 l4">
+                <div class="related-section">
+                    <div class="related-title">Related articles</div>
+                    <div class="related-links">
+                        <a href="{{route('privacy')}}">Privacy Policy</a>
+                        <a href="{{route('terms')}}">Terms and Conditions</a>
+                        <a href="/croatia-holidays-podnosenje-prigovora.pdf">Dealing with customer complaint</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @include("partials.slider",["main_title"=>"FEATURED"])
+    @include("partials.summer")
+    @include("partials.blog")
+    @include("partials.contact")
+    <script>
+        // document.addEventListener('DOMContentLoaded', () =>    UI.shipsInit()); // (2)
+    </script>
+
+@endsection

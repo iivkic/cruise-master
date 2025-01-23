@@ -1,0 +1,383 @@
+#Expires Caching Start #
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # Images
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+
+  # Video
+  ExpiresByType video/mp4 "access plus 1 year"
+  ExpiresByType video/mpeg "access plus 1 year"
+
+  # CSS, JavaScript
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+
+  # Others
+  ExpiresByType application/pdf "access plus 1 month"
+  ExpiresByType application/x-shockwave-flash "access plus 1 month"
+</IfModule>
+# Expires Caching End #
+
+#<IfModule mod_deflate.c>
+#AddOutputFilterByType DEFLATE image/svg+xml svg svgz text/text text/html text/plain text/xml text/css application/x-javascript application/javascript
+#</IfModule>
+
+# Cache #
+#<FilesMatch "\.(html|htm|js|css|php)>"
+#FileETag None
+#Header unset ETag
+#Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+#Header set Pragma "no-cache"
+#Header set Expires "Wed, 11 Jan 1984 05:00:00 GMT"
+#</FilesMatch>
+
+Options +FollowSymLinks
+RewriteEngine on
+#strip slash
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^(.*)/$ /$1 [R=301,L]
+
+
+# Canonical redirect to www forcing https.
+RewriteCond %{HTTP_HOST} !^www\.
+RewriteRule .* https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteCond %{HTTPS} off
+RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Inactive sites redirects
+RewriteRule ^adriatic-cruises-croatia/cruise-dubrovnik-omis-adriatic-pearl-11pearl-1009$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-dubrovnik-omis-adriatic-pearl-11 [L,R=301]
+
+
+RewriteRule ^adriatic-cruises-croatia/cruise-split-paradis-115$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-2020-new-star-128$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-paradis-116$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-2020-new-star-128$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-from-split-to-split-riva-80$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-2020-new-star-128$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-dubrovnik-olivia-adriatica-89$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-dubrovnik-dubrovnik-147$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-dubrovnik-venice-klara-101$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-dubrovnik-split-2020-bella-126$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-dubrovnik-venice-klara-102$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-dubrovnik-2020-bella-127$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-venice-dubrovnik-monet-103$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-dubrovnik-2020-bella-127$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-dubrovnik-venice-monet-104$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-dubrovnik-split-2020-bella-126$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-dubrovnik-opatija-2020-antaris-122$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-dubrovnik-opatija-156$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-opatija-dubrovnik-2020-antaris-123$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-opatija-dubrovnik-186$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-opatija-2020-antaris-124$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-dubrovnik-opatija-191$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-2020-antaris-125$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-split-170$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-split-212$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-split-217$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-dubrovnik-split-213$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-dubrovnik-split-218$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-dubrovnik-214$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-dubrovnik-219$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-split-215$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-split-220$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-dubrovnik-mb-otac-nikola-3$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-dubrovnik-dubrovnik-147$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-dubrovnik-markan-4$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-dubrovnik-dubrovnik-147$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-omis-dubrovnik-agape-rose-5$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-omis-dubrovnik-149$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-dubrovnik-providenca-6$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-dubrovnik-dubrovnik-147$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-dubrovnik-aquamarin-8$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-dubrovnik-dubrovnik-181$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-opatija-maritimo-9$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-opatija-opatija-198$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-dubrovnik-omis-agape-rose-10$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-omis-dubrovnik-149$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-dubrovnik-omis-adriatic-pearl-11$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-omis-dubrovnik-149$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-opatija-dubrovnik-infinity-12$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-opatija-opatija-168$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-dubrovnik-opatija-fantazija-13$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-dubrovnik-opatija-166$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-omis-dubrovnik-adriatic-pearl-14$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-omis-dubrovnik-149$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-dubrovnik-opatija-infinity-15$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-dubrovnik-opatija-166$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-opatija-dubrovnik-aquamarin-16$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-opatija-dubrovnik-192$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-dubrovnik-opatija-maritimo-17$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-dubrovnik-opatija-193$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-opatija-dubrovnik-avangard-18$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-opatija-dubrovnik-186$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-dubrovnik-opatija-aquamarin-19$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-dubrovnik-opatija-191$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-dubrovnik-markan-20$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-dubrovnik-172$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-dubrovnik-spalato-22$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-dubrovnik-219$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-dream-23$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-split-201$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-majestic-24$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-split-207$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-black-swan-25$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-split-159$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-amalia-26$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-split-199$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-markan-wednesday-27$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-dubrovnik-172$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-dubrovnik-ave-maria-28$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-dubrovnik-197$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-dubrovnik-dream-30$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-dubrovnik-197$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-dubrovnik-opatija-avangard-31$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-split-155$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-dubrovnik-split-markan-32$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-dubrovnik-split-171$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-dubrovnik-split-black-swan-34$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-dubrovnik-split-157$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-dubrovnik-split-dream-35$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-dubrovnik-split-200$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-dubrovnik-split-fantazija-36$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-dubrovnik-split-179$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-dubrovnik-split-futura-37$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-dubrovnik-split-160$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-dubrovnik-split-infinity-38$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-dubrovnik-split-167$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-seagull-39$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-split-217$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-dubrovnik-split-majestic-40$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-dubrovnik-split-205$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-avangard-wednseday-41$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-split-155$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-dubrovnik-split-spalato-42$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-dubrovnik-split-218$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-dubrovnik-split-adriatic-sun-43$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-dubrovnik-split-218$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-dubrovnik-split-adriatic-sun-43$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-dubrovnik-split-218$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-dubrovnik-split-amalia-44$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-dubrovnik-split-218$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-aquamarin-45$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-split-199$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-dubrovnik-split-aquamarin-46$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-dubrovnik-split-218$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-dubrovnik-split-riva-47$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-dubrovnik-split-188$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-yolo-48$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-2020-yolo-ohana-142$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-dubrovnik-split-avangard-49$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-dubrovnik-split-218$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-dubrovnik-split-san-antonio-50$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-dubrovnik-split-174$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-dubrovnik-split-nautilus-51$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-dubrovnik-split-218$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-sea-swallow-52$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-split-199$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-dubrovnik-split-my-way-54$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-dubrovnik-split-182$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-moonlight-55$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-split-209$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-dubrovnik-split-lupus-mare-56$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-dubrovnik-split-202$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-san-antonio-58$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-split-177$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-admiral-59$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-split-154$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-katarina-60$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-split-162$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-katarina-60$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-split-162$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-san-antonio-61$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-split-176$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-my-way-62$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-split-176$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-northern-maritimo-63$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-split-221$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-infinity-64$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-split-170$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-riva-65$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-split-170$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-avangard-66$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-split-155$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-from-split-to-split-ave-maria-67$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-split-155$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-lupus-mare-68$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-split-204$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-dubrovnik-fantazija-69$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-dubrovnik-180$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-dubrovnik-majestic-70$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-dubrovnik-206$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-from-split-to-split-northern-lights-dream-71$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-split-221$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-dubrovnik-maritimo-72$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-dubrovnik-206$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-from-split-to-split-futura-73$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-split-161$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-dubrovnik-my-way-74$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-dubrovnik-split-183$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-dubrovnik-adriatic-sun-75$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-dubrovnik-split-183$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-from-split-to-split-spalato-76$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-split-220$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-dubrovnik-amalia-77$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-dubrovnik-206$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-dubrovnik-riva-78$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-dubrovnik-split-190$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-from-split-to-split-northern-gems-ave-maria-79$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-split-187$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-dubrovnik-infinity-81$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-dubrovnik-169$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-dubrovnik-avangard-83$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-dubrovnik-169$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-dubrovnik-moonlight-85$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-dubrovnik-169$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-dubrovnik-san-antonio-86$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-dubrovnik-175$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-dubrovnik-san-antonio-86$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-dubrovnik-175$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-dubrovnik-nautilus-87$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-dubrovnik-175$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-dubrovnik-split-aurora-92$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-dubrovnik-split-190$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-dubrovnik-aurora-93$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-dubrovnik-180$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-aurora-94$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-2020-aurora-129$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-dubrovnik-split-antaris-96$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-dubrovnik-split-2020-antaris-120$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-dubrovnik-antaris-97$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-dubrovnik-2020-antaris-121$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-president-99$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-dubrovnik-180$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-new-star-100$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-2020-new-star-128$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-dubrovnik-split-adriatic-queen-105$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-dubrovnik-split-225$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-dubrovnik-adriatic-queen-106$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-dubrovnik-180$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-afrodita-107$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-split-220$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-arca-108$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-split-226$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-dubrovnik-eden-111$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-dubrovnik-dubrovnik-222$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-kleopatra-114$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-split-226$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-split-dubrovnik-solaris-90$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-split-dubrovnik-180$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-dubrovnik-mb-solaris-7$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-dubrovnik-dubrovnik-222$1? [L,R=301]
+RewriteRule ^adriatic-cruises-croatia/cruise-dubrovnik-split-solaris-91$ https://www.mycroatiacruise.com/adriatic-cruises-croatia/cruise-dubrovnik-split-225$1? [L,R=301]
+RewriteRule ^cruise-item/equator-one-way-cruise-dubrovnik-split$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^cruise-item/sea-swallow-deluxe-superior-cruise-split-split$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^cruise-item/adriatic-pearl-elegance-cruise-dubrovnik-omis$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^cruise-item/black-swan-deluxe-superior-cruise-split-split$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^cruise-item/infinity-deluxe-superior-cruise-opatija-dubrovnik$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^cruise-item/yolo-luxury-deluxe-cruise-split-split$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^cruise-item/my-way-deluxe-cruise-split-dubrovnik$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^cruise-item/maritimo-delux-superiror-cruise-dubrovnik-opatija$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^opatija-opatija$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^adriatic-cruise-destinations$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^cruise-ships/adriatic-sun$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^cruise-item/admiral-deluxe-cruise-split-split$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^cruise-ships/admiral$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^cruise-item/ave-maria-deluxe-superior-cruise-split-dubrovnik$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^cruise-ships/viktorija$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^cruise-ships/yolo$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^tag/dubrovnik$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^cruise-ships/riva$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^cruise-item/katarina-deluxe-cruise-split-split-wednesday$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^cruise-ships/aquamarin$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^cruise-ships/providenca$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^cruise-ships/solaris$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^cruise-item/seagull-premium-superior-cruise-split-split$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^cruise-item/otac-nikola-traditional-cruise-dubrovnik-dubrovnik$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^cruises-dubrovnik/page/3$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^cruises-dubrovnik/page/1$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^cruise-ships/madona$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^cruise-ships/maritimo$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^cruise-item/nautilus-deluxe-cruise-dubrovnik-opatija-wednesday$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^cruise-item/splendid-island-cruise-dubrovnik-split/island-hopping-cruise-7$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^cruise-item/my-way-deluxe-cruise-split-split$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^cruise-item/nautilus-deluxe-cruise-split-dubrovnik-wednesday$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^services-1(.*) https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^cruise-item/adriatic-explorer-from-dubrovnik-opatija$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^small-ships-cruises-around-croatia/page/1(.*) https://www.mycroatiacruise.com/$ [L,R=301]
+RewriteRule ^cruise-item/nautilus-deluxe-cruise-split-dubrovnik-wednesday$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^cruise-ships/mama-marija$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^cruise-item/infinity-deluxe-superior-cruise-opatija-dubrovnik-2$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^cruise-ships/myway$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^cruises-dubrovnik/page/2$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^homepage-09(.*) https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^cruise-item/nautilus-deluxe-cruise-dubrovnik-opatija-wednesday$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^cruise-ships/futura/futura-2$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^cruise-ships/sea-swallow$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^small-ships-cruises-around-croatia/page/5(.*) https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^cruise-item/fantazija-deluxe-cruise-split-dubrovnik-wednesday$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^cruise-item/dream-premium-superior-cruise-split-dubrovnik$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^booking/checkPromo.php(.*) https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^cruise-item/avangard-delux-superiror-cruise-dubrovnik-split$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^cruise-item/adriatic-explorer-from-opatija-dubrovnik$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^small-ships-cruises-around-croatia(.*) https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^buttons-style$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^country-item/split/kavala$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^cruise-item/avangard-delux-superiror-cruise-dubrovnik-split$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^about-us-2(.*) https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^portfolio-item/lupus-mare$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^portfolio-item/admiral$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^contact-us$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^cruise-ships/delija$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^cruise-item/moonlight-premium-superior-cruise-split-dubrovnik-2$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^cruise_category/deluxe-superior-cruises$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^cruise-item/riva-deluxe-superior-cruise-dubrovnik-split$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^cruise-ships/labrador$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^cruise-ships/panorama$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^cruise-item/amalia-premium-superior-cruise-split-split$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^cruise-ships/markan$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^cruise-ships/seagull$ https://www.mycroatiacruise.com/$1 [L,R=301]
+RewriteRule ^portfolio_entries/monte-carlo$ https://www.mycroatiacruise.com/$1 [L,R=301]
+
+
+# My Croatia Cruise - Home i jezik.
+#RewriteCond %{REQUEST_URI} !^/app.*
+RewriteRule ^en$ /views/default/master.php?lang=en&viewgroup=default&view=home [L,NC]
+RewriteRule ^en/$ /views/default/master.php?lang=en&viewgroup=default&view=home [L,NC]
+RewriteRule ^hr$ /views/default/master.php?lang=hr&viewgroup=default&view=home [L,NC]
+RewriteRule ^hr/$ /views/default/master.php?lang=hr&viewgroup=default&view=home [L,NC]
+RewriteRule ^/$ /views/default/master.php?lang=en&viewgroup=default&view=home [L,NC]
+RewriteRule ^$ /views/default/master.php?lang=en&viewgroup=default&view=home [L,NC]
+
+# My Croatia Cruise - Cruises i jezik.
+RewriteRule ^hr/krstarenja$ /views/default/master.php?lang=hr&viewgroup=default&view=cruises [L,NC]
+RewriteRule ^hr/krstarenja/$ /views/default/master.php?lang=hr&viewgroup=default&view=cruises [L,NC]
+RewriteRule ^adriatic-cruises-croatia$ /views/default/master.php?lang=en&viewgroup=default&view=cruises [L,NC,QSA]
+RewriteRule ^adriatic-cruises-croatia/$ /views/default/master.php?lang=en&viewgroup=default&view=cruises [L,NC,QSA]
+
+# My Croatia Cruise - Cruises port i jezik.
+RewriteRule ^hr/krstarenja/luka/(.*)$ /views/default/master.php?lang=hr&viewgroup=default&view=cruises&post=$1 [L,NC,QSA]
+RewriteRule ^adriatic-cruises-croatia/port/(.*)$ /views/default/master.php?lang=en&viewgroup=default&view=cruises&post=$1 [L,NC,QSA]
+
+# My Croatia Cruise - Cruises destination i jezik.
+RewriteRule ^hr/krstarenja/destinacija/(.*)$ /views/default/master.php?lang=hr&viewgroup=default&view=cruises&post=$1 [L,NC,QSA]
+RewriteRule ^adriatic-cruises-croatia/destination/(.*)$ /views/default/master.php?lang=en&viewgroup=default&view=cruises&post=$1 [L,NC,QSA]
+
+# My Croatia Cruise - Cruise single i jezik.
+RewriteRule ^hr/krstarenja/(.*)$ /views/default/master.php?lang=hr&viewgroup=default&view=cruise&parentview=cruises&post=$1 [L,NC,QSA]
+RewriteRule ^adriatic-cruises-croatia/(.*)$ /views/default/master.php?lang=en&viewgroup=default&view=cruise&parentview=cruises&post=$1 [L,NC,QSA]
+
+# My Croatia Cruise - Ships i jezik.
+RewriteRule ^hr/brodovi$ /views/default/master.php?lang=hr&viewgroup=default&view=ships [L,NC]
+RewriteRule ^hr/brodovi/$ /views/default/master.php?lang=hr&viewgroup=default&view=ships [L,NC]
+RewriteRule ^small-ships-cruise-croatia$ /views/default/master.php?lang=en&viewgroup=default&view=ships [L,NC]
+RewriteRule ^small-ships-cruise-croatia/$ /views/default/master.php?lang=en&viewgroup=default&view=ships [L,NC]
+
+# My Croatia Cruise - Ship single i jezik.
+RewriteRule ^hr/brodovi/(.*)$ /views/default/master.php?lang=hr&viewgroup=default&view=ship&parentview=ships&post=$1 [L,NC,QSA]
+RewriteRule ^small-ships-cruise-croatia/(.*)$ /views/default/master.php?lang=en&viewgroup=default&view=ship&parentview=ships&post=$1 [L,NC,QSA]
+
+# My Croatia Cruise - Destinations i jezik.
+RewriteRule ^hr/destinacije$ /views/default/master.php?lang=hr&viewgroup=default&view=destinations [L,NC]
+RewriteRule ^hr/destinacije/$ /views/default/master.php?lang=hr&viewgroup=default&view=destinations [L,NC]
+RewriteRule ^cruise-croatia-coast$ /views/default/master.php?lang=en&viewgroup=default&view=destinations [L,NC]
+RewriteRule ^cruise-croatia-coast/$ /views/default/master.php?lang=en&viewgroup=default&view=destinations [L,NC]
+
+# My Croatia Cruise - Destinacija detalj i jezik.
+RewriteRule ^hr/destinacije/(.*)$ /views/default/master.php?lang=hr&viewgroup=default&view=destination&parentview=destinations&post=$1 [L,NC,QSA]
+RewriteRule ^cruise-croatia-coast/(.*)$ /views/default/master.php?lang=en&viewgroup=default&view=destination&parentview=destinations&post=$1 [L,NC,QSA]
+
+# My Croatia Cruise - Starting ports i jezik.
+RewriteRule ^hr/polazne-luke$ /views/default/master.php?lang=hr&viewgroup=default&view=startingports [L,NC]
+RewriteRule ^hr/polazne-luke/$ /views/default/master.php?lang=hr&viewgroup=default&view=startingports [L,NC]
+RewriteRule ^cruise-ports$ /views/default/master.php?lang=en&viewgroup=default&view=startingports [L,NC]
+RewriteRule ^cruise-ports/$ /views/default/master.php?lang=en&viewgroup=default&view=startingports [L,NC]
+
+# My Croatia Cruise - Starting ports cruises i jezik.
+RewriteRule ^cruise-ports/(.*)$ /views/default/master.php?lang=en&viewgroup=default&view=cruises&port=$1 [L,NC,QSA]
+
+# My Croatia Cruise - Blog i jezik.
+RewriteRule ^hr/blog$ /views/default/master.php?lang=hr&viewgroup=default&view=blog [L,NC]
+RewriteRule ^hr/blog/$ /views/default/master.php?lang=hr&viewgroup=default&view=blog [L,NC]
+RewriteRule ^cruise-news$ /views/default/master.php?lang=en&viewgroup=default&view=blog [L,NC]
+RewriteRule ^cruise-news/$ /views/default/master.php?lang=en&viewgroup=default&view=blog [L,NC]
+
+# My Croatia Cruise - Blog single i jezik.
+RewriteRule ^hr/blog/(.*)$ /views/default/master.php?lang=hr&viewgroup=default&view=blogsingle&parentview=blog&post=$1 [L,NC,QSA]
+RewriteRule ^cruise-news/(.*)$ /views/default/master.php?lang=en&viewgroup=default&view=blogsingle&parentview=blog&post=$1 [L,NC,QSA]
+
+# My Croatia Cruise - Faq i jezik.
+RewriteRule ^hr/faq$ /views/default/master.php?lang=hr&viewgroup=default&view=faq [L,NC]
+RewriteRule ^hr/faq/$ /views/default/master.php?lang=hr&viewgroup=default&view=faq [L,NC]
+RewriteRule ^faq$ /views/default/master.php?lang=en&viewgroup=default&view=faq [L,NC]
+RewriteRule ^faq/$ /views/default/master.php?lang=en&viewgroup=default&view=faq [L,NC]
+
+# My Croatia Cruise - contact i jezik.
+RewriteRule ^hr/kontakt$ /views/default/master.php?lang=hr&viewgroup=default&view=contact [L,NC]
+RewriteRule ^hr/kontakt/$ /views/default/master.php?lang=hr&viewgroup=default&view=contact [L,NC]
+RewriteRule ^contact$ /views/default/master.php?lang=en&viewgroup=default&view=contact [L,NC]
+RewriteRule ^contact/$ /views/default/master.php?lang=en&viewgroup=default&view=contact [L,NC]
+
+# My Croatia Cruise - Privacy policy i jezik.
+RewriteRule ^privacy-policy-hr$ /views/default/master.php?lang=en&viewgroup=default&view=privacy-hr [L,NC]
+RewriteRule ^privacy-policy-hr/$ /views/default/master.php?lang=en&viewgroup=default&view=privacy-hr [L,NC]
+RewriteRule ^privacy-policy$ /views/default/master.php?lang=en&viewgroup=default&view=privacy [L,NC]
+RewriteRule ^privacy-policy/$ /views/default/master.php?lang=en&viewgroup=default&view=privacy [L,NC]
+
+# My Croatia Cruise - About us
+RewriteRule ^o-nama$ /views/default/master.php?lang=en&viewgroup=default&view=abouthr [L,NC]
+RewriteRule ^o-nama/$ /views/default/master.php?lang=en&viewgroup=default&view=abouthr [L,NC]
+RewriteRule ^about-us$ /views/default/master.php?lang=en&viewgroup=default&view=about [L,NC]
+RewriteRule ^about-us/$ /views/default/master.php?lang=en&viewgroup=default&view=about [L,NC]
+
+
+# My Croatia Cruise - Guleti
+RewriteRule ^hr/guleti$ /views/default/master.php?lang=hr&viewgroup=default&view=guleti [L,NC]
+RewriteRule ^hr/guleti/$ /views/default/master.php?lang=hr&viewgroup=default&view=guleti [L,NC]
+RewriteRule ^gulets-cruise-croatia$ /views/default/master.php?lang=en&viewgroup=default&view=guleti [L,NC]
+RewriteRule ^gulets-cruise-croatia/$ /views/default/master.php?lang=en&viewgroup=default&view=guleti [L,NC]
+
+# My Croatia Cruise - Guleti single
+RewriteRule ^hr/guleti/(.*)$ /views/default/master.php?lang=hr&viewgroup=default&view=gulet&parentview=guleti&post=$1 [L,NC,QSA]
+RewriteRule ^gulets-cruise-croatia/(.*)$ /views/default/master.php?lang=en&viewgroup=default&view=gulet&parentview=guleti&post=$1 [L,NC,QSA]
+
+
+
+#Stijepo
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^app/$ app/index.php?path=$1 [NC,L,QSA]
+
+# BEGIN cPanel-generated php ini directives, do not edit
+# Manual editing of this file may result in unexpected behavior.
+# To make changes to this file, use the cPanel MultiPHP INI Editor (Home >> Software >> MultiPHP INI Editor)
+# For more information, read our documentation (https://go.cpanel.net/EA4ModifyINI)
+<IfModule php7_module>
+   php_flag display_errors Off
+   php_value max_execution_time 1024
+   php_value max_input_time -1
+   php_value max_input_vars 1440
+   php_value memory_limit 1024M
+   php_value post_max_size 32M
+   php_value session.gc_maxlifetime 1440
+   php_value session.save_path "/var/cpanel/php/sessions/ea-php70"
+   php_value upload_max_filesize 32M
+   php_flag zlib.output_compression On
+</IfModule>
+<IfModule lsapi_module>
+   php_flag display_errors Off
+   php_value max_execution_time 1024
+   php_value max_input_time -1
+   php_value max_input_vars 1440
+   php_value memory_limit 1024M
+   php_value post_max_size 32M
+   php_value session.gc_maxlifetime 1440
+   php_value session.save_path "/var/cpanel/php/sessions/ea-php70"
+   php_value upload_max_filesize 32M
+   php_flag zlib.output_compression On
+</IfModule>
+# END cPanel-generated php ini directives, do not edit
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php72” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php72 .php .php7 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit

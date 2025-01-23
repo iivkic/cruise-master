@@ -1,0 +1,303 @@
+.ports-container {
+    .section{
+        padding: 16px;
+    }
+
+    .header {
+        position: relative;
+        background: transparent url('/images/ships/ship.jpg') no-repeat 65% center;
+        background-size: cover;
+        min-height: 384px;
+        max-height: 384px;
+        display: flex;
+        align-items: flex-end;
+
+        .header-content{
+            position: absolute;
+            top: calc(50% - 48px);
+            .title {
+                font-size: 50px;
+                line-height: 64px;
+                letter-spacing: 2.5px;
+                font-weight: bold;
+                h1{
+                    margin: 0;
+                    font-size: inherit;
+                    line-height: inherit;
+                    letter-spacing: inherit;
+                    font-weight: inherit;
+                }
+                .small {
+                    font-size: 16px;
+                    line-height: 20px;
+                    letter-spacing: 1.6px;
+                    font-weight: bold;
+                    padding-bottom: 12px;
+                }
+            }
+        }
+    }
+
+    .ports-wrapper{
+        padding-top: 32px;
+
+        .ports-text{
+
+            p{
+                text-align: center;
+                font-size: 13px;
+                line-height: 24px;
+                letter-spacing: 0.65px;
+                color: #414141;
+                font-weight: 500;
+                margin: 30px 0;
+            }
+        }
+
+        .results{
+            .cards{
+                margin: 16px -16px 0 -16px;
+
+                .ports_container{
+                    padding: 32px 16px 0 16px;
+                }
+            }
+
+            .card{
+                margin-bottom: 1.5rem;
+            }
+
+            .row, .column{
+                overflow:hidden;
+
+                .slick-slider{
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .map-container {
+            margin-bottom: 30px;
+            --aspect-ratio: 16/9;
+            min-height: 235px;
+            max-height: 744px;
+        }
+
+        .map-container > :first-child {
+            width: 100%;
+        }
+        .map-container > img {
+            height: auto;
+        }
+        @supports (--custom:property) {
+            .map-container {
+                position: relative;
+            }
+            .map-container::before {
+                content: "";
+                display: block;
+                padding-bottom: calc(100% / (var(--aspect-ratio)));
+            }
+            .map-container > :first-child {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+            }
+        }
+    }
+
+    @media (min-width: $break-s){
+        .section{
+            padding-left: 32px;
+            padding-right: 32px;
+        }
+
+        .header.section{
+            padding-bottom: 32px;
+        }
+
+        .ports-wrapper{
+            padding-top: 60px;
+
+            .results{
+                .cards{
+                    .ports_container {
+                        .column{
+                            margin-bottom: 32px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: $break-m){
+        .section{
+            padding-left: 60px;
+            padding-right: 60px;
+        }
+
+        .header{
+            .header-content{
+                max-width: 100%;
+
+                .title{
+                    font-size: 38px;
+                    line-height: 50px;
+                    letter-spacing: 2.5px;
+                    margin-top: auto;
+                    min-width: 720px;
+                    max-width: 720px;
+
+                    .small{
+                        font-size: 16px;
+                        line-height: 24px;
+                        letter-spacing: 2px;
+                    }
+                }
+            }
+        }
+        .ports-wrapper {
+            .results{
+                .cards{
+                    .ports_container {
+                        .column{
+                            margin-bottom: 56px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: $break-l){
+        .section{
+            padding-left: 104px;
+            padding-right: 104px;
+        }
+
+        .header.section{
+            padding-bottom: 46px;
+
+            .header-content{
+                width: 100%;
+                max-width: 100%;
+
+                .title{
+                    font-size: 50px;
+                    line-height: 64px;
+                    letter-spacing: 2.5px;
+                    margin-top: auto;
+                    min-width: 720px;
+                    max-width: 720px;
+
+                    .small{
+                        font-size: 20px;
+                        line-height: 24px;
+                        letter-spacing: 2px;
+                    }
+                }
+
+                .text-container{
+                    width: 100%;
+                    max-width: 100%;
+                    margin-left: 60px;
+                }
+            }
+        }
+        .ports-wrapper {
+            padding-top: 100px;
+
+            .ports-text{
+                margin: 0 auto;
+                width: calc(100% - 386px);
+                max-width: 706px;
+                p{
+                    margin-top: 0;
+                }
+            }
+
+            .results{
+
+                .cards{
+
+                    .ports_container {
+                        margin: 0 -0.75rem;
+
+                        .column{
+                            margin: 0 0.75rem 60px 0.75rem;
+                            flex-basis: calc((100% / 2) - 1.5rem);
+
+                            .card-content{
+                                padding: 35px 32px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: $break-xl){
+        .section{
+            padding-left: 138px;
+            padding-right: 138px;
+        }
+
+        .header.section{
+            padding-bottom: 60px;
+
+            .header-content{
+                justify-content: space-between;
+
+                .text-container{
+                    max-width: 460px;
+                    margin-left: 30px;
+                }
+            }
+        }
+
+        .ports-wrapper {
+            .results{
+                .cards{
+
+                    .ports_container {
+                        margin: 0 -8px;
+
+                        .column{
+                            margin: 0 8px 72px 8px;
+                            flex-basis: calc((100% / 4) - 16px);
+
+                            .card-header img{
+                                min-height: 216px;
+                            }
+
+                            .card-content{
+                                padding: 35px 32px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: $break-xxl){
+        .section{
+            padding-left: 238px;
+            padding-right: 238px;
+        }
+
+        .header.section{
+            padding-bottom: 100px;
+        }
+    }
+}
+
+.webp .ports-container {
+    .header {
+        background: transparent url('/images/ships/ship.webp') no-repeat 65% center;
+        background-size: cover;
+    }
+}

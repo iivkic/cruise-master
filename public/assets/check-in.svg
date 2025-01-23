@@ -1,0 +1,11 @@
+<svg id="check-in" xmlns="http://www.w3.org/2000/svg" width="16.069" height="16" viewBox="0 0 16.069 16">
+  <g id="Group_982" data-name="Group 982">
+    <path id="Path_676" data-name="Path 676" d="M8.034,16a8,8,0,1,1,8.034-7.966A8.075,8.075,0,0,1,8.034,16Zm0-14.627A6.661,6.661,0,1,0,14.7,8.034,6.624,6.624,0,0,0,8.034,1.373Z" fill="#b8b8b8"/>
+  </g>
+  <g id="Group_983" data-name="Group 983" transform="translate(7.348 2.403)">
+    <path id="Path_677" data-name="Path 677" d="M11.387,9.818a.649.649,0,0,1-.687-.687V4.187a.687.687,0,0,1,1.373,0V9.131a.738.738,0,0,1-.687.687Z" transform="translate(-10.7 -3.5)" fill="#b8b8b8"/>
+  </g>
+  <g id="Group_984" data-name="Group 984" transform="translate(5.219 7.416)">
+    <path id="Path_678" data-name="Path 678" d="M8.287,14.165a.623.623,0,0,1-.481-.206.664.664,0,0,1,0-.961L9.8,11.006a.68.68,0,1,1,.961.961L8.767,13.959a.535.535,0,0,1-.481.206Z" transform="translate(-7.6 -10.8)" fill="#b8b8b8"/>
+  </g>
+</svg>

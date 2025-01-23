@@ -1,0 +1,15 @@
+<svg id="pin" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="46" viewBox="0 0 12 10">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#8ad1ff"/>
+      <stop offset="1" stop-color="#14a3ff"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_999" data-name="Group 999">
+    <path id="Polygon_16" data-name="Polygon 16" d="M1,19.474a1,1,0,0,1,2,0l.947,18.474a1,1,0,0,1-1,1.051H1.053a1,1,0,0,1-1-1.051Z" transform="translate(8 46) rotate(180)" fill="#414141"/>
+    <g id="Rectangle_844" data-name="Rectangle 844" stroke="#0072bc" stroke-width="1" fill="url(#linear-gradient)">
+      <rect width="12" height="12" rx="6" stroke="none"/>
+      <rect x="0.5" y="0.5" width="11" height="11" rx="5.5" fill="none"/>
+    </g>
+  </g>
+</svg>

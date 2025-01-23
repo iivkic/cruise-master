@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="18.677" height="16.531" viewBox="0 0 18.677 16.531">
+  <g id="icon-cabins" transform="translate(0.5)">
+    <g id="Group_108" data-name="Group 108" transform="translate(2.54)">
+      <g id="Rectangle_29" data-name="Rectangle 29" transform="translate(12.596) rotate(90)" fill="none" stroke="#1593E6" stroke-linecap="round" stroke-width="1">
+        <rect width="16.531" height="12.596" rx="1" stroke="none"/>
+        <rect x="0.5" y="0.5" width="15.531" height="11.596" rx="0.5" fill="none"/>
+      </g>
+      <g id="Ellipse_32" data-name="Ellipse 32" transform="translate(3.936 3.374)" fill="#fff" stroke="#1593E6" stroke-width="1">
+        <circle cx="2.362" cy="2.362" r="2.362" stroke="none"/>
+        <circle cx="2.362" cy="2.362" r="1.862" fill="none"/>
+      </g>
+    </g>
+    <line id="Line_29" data-name="Line 29" y1="15.152" transform="translate(17.677 0.689)" fill="none" stroke="#1593E6" stroke-linecap="round" stroke-width="1"/>
+    <line id="Line_30" data-name="Line 30" y1="15.152" transform="translate(0 0.689)" fill="none" stroke="#1593E6" stroke-linecap="round" stroke-width="1"/>
+  </g>
+</svg>
