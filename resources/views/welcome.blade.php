@@ -102,10 +102,11 @@
             <div class="special-offer-container">
 {{--                <div class="special-bg"></div>--}}
 {{--                <div class="special-offer-icon">@svg('/assets/star-yallow-circle.svg')</div>--}}
-                <div class="note-1">2025 EARLY BIRD DISCOUNT</div>
+                <div class="note-1">2025 SPECIAL OFFERS
+                    SAVE up to 25%</div>
 {{--                <div class="special-offer-title">Enjoy Special Booking Discounts 2024</div>--}}
                 <a class="button special-offer" href="{{ route('cruises.lmd') }}">check here</a>
-                <div class="note-2">SAVE up to 20%*</div>
+                <div class="note-2">SAVE up to 25%*</div>
                 @if(date("Y-m-d") <= "2024-12-01")
                     <div class="note-2"><span>*Black Friday extra 10% off on some departures!</span></div>
                 @endif
