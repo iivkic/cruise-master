@@ -30,7 +30,7 @@
         <div class="section location">
             <div class="title">SJEDIŠTE/ADRESA:</div>
             <div class="text">
-                Dr. Ante Starčevića 24,<br>
+                Vukovarska 26,<br>
                 20000 Dubrovnik, Croatia <br><br>
                 <div class="title">
                     Supervision:<br>Državni Inspektorat; State Inspectorate:<br>Tourist Inspection:

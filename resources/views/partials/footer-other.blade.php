@@ -15,7 +15,7 @@
             <div class="row-section">
                 <div class="text text-column">
                     <div class="title">SJEDIŠTE/ADRESA:</div>
-                    Dr. Ante Starčevića 24,<br>
+                    Vukovarska 26,<br>
                     20000 Dubrovnik, Croatia <br>
                 </div>
                 <br>

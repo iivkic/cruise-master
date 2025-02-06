@@ -45,7 +45,7 @@
                         <div class="address">
                             <span class="content-container">
                                 <span class="text">Address:</span>
-                                <span class="right-text float-right">Dr. Ante Starčevića 24, 20000 Dubrovnik, Croatia</span>
+                                <span class="right-text float-right">Vukovarska 26, 20000 Dubrovnik, Croatia</span>
                             </span>
                         </div>
                         <div class="line"></div>

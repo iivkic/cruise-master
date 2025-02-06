@@ -31,7 +31,7 @@
                             </li>
                             <li dir="ltr">
                                 <p dir="ltr">
-                                    Croatia Holidays Ltd. Group. headquarters are at Dr. Ante Starčevića 24, 20000 Dubrovnik, Croatia, company's phone number is +385
+                                    Croatia Holidays Ltd. Group. headquarters are at Dr. Vukovarska 26, 20000 Dubrovnik, Croatia, company's phone number is +385
                                     (0)91 1145 000 and company's email is:
                                     <a href="mailto:info@ch.hr">
                                         info@ch.hr
